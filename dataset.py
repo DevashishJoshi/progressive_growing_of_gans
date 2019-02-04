@@ -142,7 +142,10 @@ class TFRecordDataset:
 
     # Get next minibatch as TensorFlow expressions.
     def get_minibatch_tf(self): # => images, labels
-        return self._tf_iterator.get_next()
+        # making changes to better understand the code
+        a = self._tf_iterator.get_next()
+        print(a)
+        return a
 
     # Get next minibatch as NumPy arrays.
     def get_minibatch_np(self, minibatch_size, lod=0): # => images, labels
